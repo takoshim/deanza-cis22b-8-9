@@ -4,18 +4,19 @@
 #include "Student.h"
 
 class StudentList {
-  private:
-    struct ListNode {
-      Student stu;
-      ListNode * next;
-    };
+private:
+  struct ListNode {
+    Student stu;
+    ListNode * next;
+    int count;
+  };
 
-  public:
-    StudentList();
-    void displayList() const;
-    void insertNode(Student dataIn);
-    bool deleteNode(string target);
-    ~StudentList();
+public:
+  StudentList(); 
+  void displayList() const;
+  void insertNode(Student dataIn);
+  bool deleteNode(string target);
+  ~StudentList();
 };
 
 #endif
