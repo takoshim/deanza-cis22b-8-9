@@ -18,7 +18,7 @@ StudentList::StudentList()
 {
     ListNode *head = new ListNode; // head points to the sentinel node
     head->next = NULL;
-    head->count = 0;
+    count = 0;
 }
 
 //**************************************************
@@ -29,10 +29,12 @@ StudentList::StudentList()
 
 void StudentList::displayList() const
 {
-/* Write your code here */
+    ListNode *pCur = head->next;
+    while (pCur) {
+        cout << pCur->stu.getName() << " " << pCur->stu.getGpa() << endl;
+        pCur = pCur->next;
+    }
 }
-
-
 
 //**************************************************
 // The insertNode function inserts a node with

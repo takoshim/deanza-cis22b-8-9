@@ -5,10 +5,14 @@
 
 class StudentList {
 private:
-  struct ListNode {
+  
+  struct ListNode
+  {
     Student stu;
-    ListNode * next;
+    ListNode *next;
   };
+
+  ListNode *head;
   int count;
 
 public:
