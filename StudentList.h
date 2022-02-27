@@ -8,11 +8,12 @@ private:
   struct ListNode {
     Student stu;
     ListNode * next;
-    int count;
   };
+  int count;
 
 public:
-  StudentList(); 
+  StudentList();
+  int getCount() const {return count;};
   void displayList() const;
   void insertNode(Student dataIn);
   bool deleteNode(string target);

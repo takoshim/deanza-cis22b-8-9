@@ -16,9 +16,9 @@ using namespace std;
 //**************************************************
 StudentList::StudentList()
 {
-    head = new ListNode; // head points to the sentinel node
+    ListNode *head = new ListNode; // head points to the sentinel node
     head->next = NULL;
-    count = 0;
+    head->count = 0;
 }
 
 //**************************************************
