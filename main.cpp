@@ -11,8 +11,8 @@
   
  Run the program once and save the output as a comment at the end of this source file.
  
- Modified by:
- IDE:
+ Modified by: Takeo Shimazu
+ IDE: Takeo Shimazu
  
  */
 #include <iostream>

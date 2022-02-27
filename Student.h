@@ -1,6 +1,6 @@
 // Specification file for the Student class
-// Modified by:
-// IDE:
+// Modified by: Takeo Shimazu
+// IDE: Visual Studio Code
 
 #ifndef STUDENT_H
 #define STUDENT_H
