@@ -40,11 +40,11 @@ int main()
     //******************************
     cout << "TESTING DISPLAY\n\n";
     list.displayList();
-    // int n; // number of letters in a studen's name
-    // cout << "Enter n: ";
-    // cin >> n;
-    // cout << "List of students with " << n << " letter names" << endl;
-    // list.displayList(n);
+    int n; // number of letters in a studen's name
+    cout << "Enter n: ";
+    cin >> n;
+    cout << "List of students with " << n << " letter names" << endl;
+    list.displayList(n);
     
     // //******************************
     // cout << "TESTING DELETE\n\n";

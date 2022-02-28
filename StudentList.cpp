@@ -38,6 +38,20 @@ void StudentList::displayList() const
     }
 }
 
+void StudentList::displayList(int n) const
+{
+    ListNode *pCur = head->next;
+    while (pCur)3
+    {
+        if (pCur->stu.getName().length() == n)
+        {
+            cout << pCur->stu.getName() << " " << pCur->stu.getGpa() << endl;
+        }
+        pCur = pCur->next;
+
+    }
+}
+
 //**************************************************
 // The insertNode function inserts a node with
 // stu copied to its value member.
@@ -56,7 +70,7 @@ void StudentList::insertNode(Student dataIn)
     }
     pPre->next = pNew;
     pNew->next = pCur;
-    
+
     count++;
 }
 
