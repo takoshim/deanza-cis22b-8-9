@@ -28,7 +28,6 @@ StudentList::StudentList()
 // stored in each node of the linked list
 // pointed to by head.
 //**************************************************
-
 void StudentList::displayList() const
 {
     ListNode *pCur = head->next;
