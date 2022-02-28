@@ -33,9 +33,10 @@ void StudentList::displayList() const
 {
     ListNode *pCur = head->next;
     while (pCur) {
-        cout << pCur->stu.getName() << " " << pCur->stu.getGpa() << endl;
+        cout << pCur->stu.getGpa() << " " << pCur->stu.getName() << endl;
         pCur = pCur->next;
     }
+    cout << endl;
 }
 
 void StudentList::displayList(int n) const
@@ -45,11 +46,11 @@ void StudentList::displayList(int n) const
     {
         if (pCur->stu.getName().length() == n)
         {
-            cout << pCur->stu.getName() << " " << pCur->stu.getGpa() << endl;
+            cout << pCur->stu.getGpa() << " " << pCur->stu.getName() << endl;
         }
         pCur = pCur->next;
-
     }
+    cout << endl;
 }
 
 //**************************************************
@@ -87,21 +88,18 @@ bool StudentList::deleteNode(string target)
 
     while (pCur != NULL && pCur->stu.getName() != target)
     {
-        pCur = pCur->next;
         pPre = pCur;
-    }
-    if (pCur == NULL)
-    {
-        return deleted;
+        pCur = pCur->next;
     }
 
-    else
-    {    
+    if (pCur != NULL && pCur->stu.getName() == target)
+    {
         pPre->next = pCur->next;
         delete pCur;
         deleted = true;
-        return deleted;
+        count--;
     }
+    return deleted;
 }
 
 //**************************************************
