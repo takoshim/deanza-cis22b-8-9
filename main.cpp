@@ -33,33 +33,33 @@ int main()
         cout << "\tInsert " << s[i].getGpa() << " " << s[i].getName() << endl;
         list.insertNode(s[i]);
         // Display the values in the list.
-        // list.displayList();
-        // cout << "\t\tThis list has " << list.getCount() << " student[s]\n\n";
+        list.displayList();
+        cout << "\t\tThis list has " << list.getCount() << " student[s]\n\n";
     }
     
     //******************************
     cout << "TESTING DISPLAY\n\n";
     list.displayList();
-    int n; // number of letters in a studen's name
-    cout << "Enter n: ";
-    cin >> n;
-    cout << "List of students with " << n << " letter names" << endl;
-    list.displayList(n);  //<====================================
+    // int n; // number of letters in a studen's name
+    // cout << "Enter n: ";
+    // cin >> n;
+    // cout << "List of students with " << n << " letter names" << endl;
+    // list.displayList(n);
     
-    //******************************
-    cout << "TESTING DELETE\n\n";
-    string target[] = { "Andy", "Tina", "Katie", "Tim", ""}; // names to test deleteNode with
+    // //******************************
+    // cout << "TESTING DELETE\n\n";
+    // string target[] = { "Andy", "Tina", "Katie", "Tim", ""}; // names to test deleteNode with
     
-    for (int i = 0; target[i] != ""; i++)
-    {
-        if( list.deleteNode(target[i]) )
-            cout << target[i] << " - Deleted!\n";
-        else
-            cout << target[i] << " - Not found\n";
-    }
-    list.displayList();
+    // for (int i = 0; target[i] != ""; i++)
+    // {
+    //     if( list.deleteNode(target[i]) )
+    //         cout << target[i] << " - Deleted!\n";
+    //     else
+    //         cout << target[i] << " - Not found\n";
+    // }
+    // list.displayList();
     
-    cout << "\t\tThis list has " << list.getCount() << " student[s]\n\n";
+    // cout << "\t\tThis list has " << list.getCount() << " student[s]\n\n";
     
     return 0;
 }

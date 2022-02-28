@@ -16,7 +16,9 @@ using namespace std;
 //**************************************************
 StudentList::StudentList()
 {
-    ListNode *head = new ListNode; // head points to the sentinel node
+    head = new ListNode; // head points to the sentinel node
+    head->stu.setGpa(-1);
+    head->stu.setName("");
     head->next = NULL;
     count = 0;
 }
@@ -42,7 +44,20 @@ void StudentList::displayList() const
 //**************************************************
 void StudentList::insertNode(Student dataIn)
 {
-  /* Write your code here */
+    ListNode *pNew = new ListNode;
+    pNew->stu = dataIn;
+    ListNode *pPre = head;
+    ListNode *pCur = head->next;
+
+    while (pCur != NULL && pCur->stu.getName() < dataIn.getName())
+    {
+        pCur = pCur->next;
+        pPre = pPre->next;
+    }
+    pPre->next = pNew;
+    pNew->next = pCur;
+    
+    count++;
 }
 
 //**************************************************

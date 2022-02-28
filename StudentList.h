@@ -1,6 +1,7 @@
 #ifndef STUDENTLIST_H
 #define STUDENTLIST_H
 
+#include <string>
 #include "Student.h"
 
 class StudentList {
@@ -20,7 +21,7 @@ public:
   int getCount() const {return count;};
   void displayList() const;
   void insertNode(Student dataIn);
-  bool deleteNode(string target);
+  bool deleteNode(std::string target);
   ~StudentList();
 };
 
