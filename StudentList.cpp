@@ -39,16 +39,29 @@ void StudentList::displayList() const
     cout << endl;
 }
 
-void StudentList::displayList(int n) const
+//**************************************************
+// displayList shows the value
+// stored in each node of the linked list
+// if the length of name of a node matches the
+// passed int value. If none is found display "None!"
+//**************************************************
+void StudentList::displayList(size_t n) const
 {
     ListNode *pCur = head->next;
+    int counter {0};
+
     while (pCur)
     {
         if (pCur->stu.getName().length() == n)
         {
             cout << pCur->stu.getGpa() << " " << pCur->stu.getName() << endl;
+            counter++;
         }
         pCur = pCur->next;
+    }
+    if (!counter)
+    {
+        cout << "None!";
     }
     cout << endl;
 }

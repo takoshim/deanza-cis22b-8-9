@@ -32,15 +32,12 @@ int main()
     {
         cout << "\tInsert " << s[i].getGpa() << " " << s[i].getName() << endl;
         list.insertNode(s[i]);
-        // Display the values in the list.
-        list.displayList();
-        cout << "\t\tThis list has " << list.getCount() << " student[s]\n\n";
     }
     
     //******************************
     cout << "TESTING DISPLAY\n\n";
     list.displayList();
-    int n; // number of letters in a studen's name
+    size_t n; // number of letters in a studen's name
     cout << "Enter n: ";
     cin >> n;
     cout << "List of students with " << n << " letter names" << endl;
@@ -57,9 +54,9 @@ int main()
         else
             cout << target[i] << " - Not found\n";
     }
-    // list.displayList();
+    list.displayList();
     
-    // cout << "\t\tThis list has " << list.getCount() << " student[s]\n\n";
+    cout << "\t\tThis list has " << list.getCount() << " student[s]\n\n";
     
     return 0;
 }

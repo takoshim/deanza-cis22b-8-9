@@ -20,7 +20,7 @@ public:
   StudentList();
   int getCount() const {return count;};
   void displayList() const;
-  void displayList(int n) const;
+  void displayList(size_t n) const;
   void insertNode(Student dataIn);
   bool deleteNode(std::string target);
   ~StudentList();
