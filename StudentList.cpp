@@ -41,7 +41,7 @@ void StudentList::displayList() const
 void StudentList::displayList(int n) const
 {
     ListNode *pCur = head->next;
-    while (pCur)3
+    while (pCur)
     {
         if (pCur->stu.getName().length() == n)
         {
@@ -81,13 +81,27 @@ void StudentList::insertNode(Student dataIn)
 //**************************************************
 bool StudentList::deleteNode(string target)
 {
-    ListNode *pCur;       // To traverse the list
-    ListNode *pPre;        // To point to the previous node
+    ListNode *pCur = head->next;       // To traverse the list
+    ListNode *pPre = head;        // To point to the previous node
     bool deleted = false;
-    
-   /* Write your code here */
-    return deleted;
-    
+
+    while (pCur != NULL && pCur->stu.getName() != target)
+    {
+        pCur = pCur->next;
+        pPre = pCur;
+    }
+    if (pCur == NULL)
+    {
+        return deleted;
+    }
+
+    else
+    {    
+        pPre->next = pCur->next;
+        delete pCur;
+        deleted = true;
+        return deleted;
+    }
 }
 
 //**************************************************

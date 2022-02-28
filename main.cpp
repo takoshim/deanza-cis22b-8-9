@@ -46,17 +46,17 @@ int main()
     cout << "List of students with " << n << " letter names" << endl;
     list.displayList(n);
     
-    // //******************************
-    // cout << "TESTING DELETE\n\n";
-    // string target[] = { "Andy", "Tina", "Katie", "Tim", ""}; // names to test deleteNode with
+    //******************************
+    cout << "TESTING DELETE\n\n";
+    string target[] = { "Andy", "Tina", "Katie", "Tim", ""}; // names to test deleteNode with
     
-    // for (int i = 0; target[i] != ""; i++)
-    // {
-    //     if( list.deleteNode(target[i]) )
-    //         cout << target[i] << " - Deleted!\n";
-    //     else
-    //         cout << target[i] << " - Not found\n";
-    // }
+    for (int i = 0; target[i] != ""; i++)
+    {
+        if( list.deleteNode(target[i]) )
+            cout << target[i] << " - Deleted!\n";
+        else
+            cout << target[i] << " - Not found\n";
+    }
     // list.displayList();
     
     // cout << "\t\tThis list has " << list.getCount() << " student[s]\n\n";
